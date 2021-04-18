@@ -2,6 +2,7 @@ package _00_Intro_To_Arrays;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Iterator;
 import java.util.Random;
 
 import javax.swing.JButton;
@@ -28,23 +29,24 @@ int hiddenButton;
         panel = new JPanel();
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        // 3. Ask the user to enter a positive number and convert it to an int
-        String answer; 
-        answer = JOptionPane.showInputDialog("enter a positive number in number form");
+        // 3. Ask the user to enter a positive number and convert it to an int 
+        String answer = JOptionPane.showInputDialog("enter a positive number in number form");
         int size = Integer.parseInt(answer);
-        //System.out.println("Number is " + size);
+        //System.out.println("Number is " + (size + size));
         // 4. Initialize the array of JButtons to be the size of the int
         //    created in step 3
-     
+     button = new JButton[size];
 
         // 5. Make a for loop to iterate through the JButton array
-        
+        for (int i = 0; i < button.length; i++) {
+			
+		
             // 6. initialize each JButton in the array
         
             // 7. add the ActionListener to each JButton
         
             // 8. add each JButton to the panel
-
+        }
         // 9 add the panel to the window
 
         // 10. call setExtendedState(JFrame.MAXIMIZED_BOTH) on your JFrame object.
