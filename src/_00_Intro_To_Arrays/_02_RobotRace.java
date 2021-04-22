@@ -1,5 +1,6 @@
 package _00_Intro_To_Arrays;
 
+import java.util.Iterator;
 import java.util.Random;
 
 import javax.swing.JOptionPane;
@@ -13,15 +14,28 @@ public static void main(String[] args) {
 
         // 2. create an array of 5 robots.
 Robot[] robots = new Robot[5];
+boolean gameRunning = true;
         // 3. use a for loop to initialize the robots.
 for (int i = 0; i < robots.length; i++) {
-	robot[i] = new Robot;
+	robots[i] = new Robot();
+	
 }
         // 4. make each robot start at the bottom of the screen, side by side, facing up
-    
+for (int i = 0; i < robots.length; i++) {
+	 robots[i].setY(500);
+	 robots[i].setX(i*150+150);
+}
+
         // 5. use another for loop to iterate through the array and make each robot move
         // a random amount less than 50.
-    
+    Random rand = new Random();
+    while (gameRunning) {
+		 for (int i = 0; i < robots.length; i++) {
+    	int distance = rand.nextInt(50); 
+		robots[i].move(i);
+		System.out.println(distance);
+	}
+    }
         // 6. use a while loop to repeat step 5 until a robot has reached the top of the
         // screen.
     
