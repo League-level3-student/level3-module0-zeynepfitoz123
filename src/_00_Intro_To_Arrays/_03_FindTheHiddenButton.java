@@ -39,21 +39,25 @@ int hiddenButton;
 
         // 5. Make a for loop to iterate through the JButton array
         for (int i = 0; i < button.length; i++) {
-			
 		
             // 6. initialize each JButton in the array
-        
+			button[i] =  new JButton();
             // 7. add the ActionListener to each JButton
-        
+			button[i].addActionListener(null);
             // 8. add each JButton to the panel
+			panel.add(button[i]);
         }
         // 9 add the panel to the window
+        window.add(panel);
 
         // 10. call setExtendedState(JFrame.MAXIMIZED_BOTH) on your JFrame object.
+        window.setExtendedState(JFrame.MAXIMIZED_BOTH);
 
         // 11. set the JFrame to visible.
+        window.setVisible(true);
 
         // 12. Give the user the instructions for the game.
+        window.add("h", panel);
 
         // 13. initialize the hiddenButton variable to a random number less than
         //     the int created in step 3

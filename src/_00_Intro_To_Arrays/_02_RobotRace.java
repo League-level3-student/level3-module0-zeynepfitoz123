@@ -31,9 +31,16 @@ for (int i = 0; i < robots.length; i++) {
     Random rand = new Random();
     while (gameRunning) {
 		 for (int i = 0; i < robots.length; i++) {
-    	int distance = rand.nextInt(50); 
-		robots[i].move(i);
+		
+				 
+    	int distance = rand.nextInt(500); 
+		robots[i].move(distance);
 		System.out.println(distance);
+			 
+		 if(robots[i].getY()==0) {
+			 
+		
+		 }
 	}
     }
         // 6. use a while loop to repeat step 5 until a robot has reached the top of the
