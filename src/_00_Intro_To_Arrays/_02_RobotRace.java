@@ -24,6 +24,7 @@ for (int i = 0; i < robots.length; i++) {
 for (int i = 0; i < robots.length; i++) {
 	 robots[i].setY(500);
 	 robots[i].setX(i*150+150);
+	 robots[i].setSpeed(1000);
 }
 
         // 5. use another for loop to iterate through the array and make each robot move
@@ -37,10 +38,12 @@ for (int i = 0; i < robots.length; i++) {
 		robots[i].move(distance);
 		System.out.println(distance);
 			 
-		 if(robots[i].getY()==0) {
-			 
-		
-		 }
+		 if(robots[i].getY()<0) {
+			 JOptionPane.showMessageDialog(null, "Robot " + i + " wins");
+			 System.exit(0);
+			
+		 } 
+		 
 	}
     }
         // 6. use a while loop to repeat step 5 until a robot has reached the top of the
