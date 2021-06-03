@@ -14,7 +14,7 @@ String[] pets = new String[5];
 System.out.println(pets);
 
 
-    //3. Write a method that takes an array of Strings and prints all the Strings in the array
+    //3. Write a method  takes an array of Strings and prints all the Strings in the array
     //   in reverse order.
 
 
