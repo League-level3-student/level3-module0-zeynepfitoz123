@@ -39,7 +39,7 @@ for (int i = 0; i < sparks.length; i++) {
     }
 
     public void updateSparks() {
-         8. Uncomment this code. See if you can understand what it is doing.
+        // 8. Uncomment this code. See if you can understand what it is doing.
 
         for(int i = 0; i < sparks.length; i++) {
        
@@ -73,8 +73,9 @@ for (int i = 0; i < sparks.length; i++) {
     public void drawSparks(Graphics g) {
         // 5. Iterate through each spark
     	for (int i = 0; i < sparks.length; i++) {
-			sparks[i].color = g.setColor();
-			sparks[i].
+			  g.setColor(sparks[i].color);
+			  g.fillOval(sparks[i].x, sparks[i].y, sparks[i].size, sparks[i].size);
+			
 		}
         // 6. Set the color to the spark's color with g.setColor()
         // 7. Fill in an oval using the spark's x, y, and size with g.fillOval()
